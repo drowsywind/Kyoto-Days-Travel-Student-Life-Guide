@@ -1,0 +1,74 @@
+KYOTO DAYS　写真・画像出典
+
+本サイトでは、下記の写真をWikimedia Commonsから取得し、サイトをオフラインでも閲覧できるようにローカル保存しています。
+表示に合わせて縮小・トリミングする場合があります。各写真の著作権・ライセンスは原作者および各ライセンス条件に従います。
+
+1. assets/images/fushimi.jpg
+   内容：伏見稲荷大社の千本鳥居
+   作者：Basile Morin
+   ライセンス：CC BY-SA 4.0
+   出典：https://commons.wikimedia.org/wiki/File:Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg
+
+2. assets/images/kinkakuji.jpg
+   内容：金閣寺
+   作者：Basile Morin
+   ライセンス：CC BY-SA 4.0
+   出典：https://commons.wikimedia.org/wiki/File:Water_reflection_of_Kinkaku-ji_Temple_a_sunny_day,_Kyoto,_Japan.jpg
+
+3. assets/images/arashiyama.jpg
+   内容：嵐山・渡月橋
+   作者：Blue Lotus
+   ライセンス：CC BY 2.0
+   出典：https://commons.wikimedia.org/wiki/File:Togetsukyo_in_Kyoto_Arashiyama.jpg
+
+4. assets/images/kiyomizu.jpg
+   内容：清水寺
+   作者：Jordy Meow
+   ライセンス：CC BY-SA 3.0
+   出典：https://commons.wikimedia.org/wiki/File:Kiyomizu.jpg
+
+5. assets/images/gion.jpg
+   内容：祇園・花見小路
+   作者：663highland
+   ライセンス：CC BY-SA 3.0
+   出典：https://commons.wikimedia.org/wiki/File:150124_Gion_Kyoto_Japan01s3.jpg
+
+6. assets/images/kaiseki.jpg
+   内容：懐石料理
+   作者：Chris 73 / Wikimedia Commons
+   ライセンス：CC BY-SA 3.0
+   出典：https://commons.wikimedia.org/wiki/File:Jisaku_Kaiseki_Ryori_01.jpg
+
+7. assets/images/bus.jpg
+   内容：京都市バス
+   作者：Mutimaro
+   ライセンス：CC BY-SA 3.0
+   出典：https://commons.wikimedia.org/wiki/File:Kyoto-city-bus-1172.jpg
+
+8. assets/images/ramen.jpg
+   内容：醤油ラーメン
+   作者：Quercus acuta
+   ライセンス：CC BY-SA 4.0
+   出典：https://commons.wikimedia.org/wiki/File:Shoyu_Ramen（Tokyo_Ramen）_-_01.jpg
+
+9. assets/images/matcha.jpg
+   内容：抹茶と茶道具
+   作者：Evanhoever
+   ライセンス：CC BY-SA 4.0
+   出典：https://commons.wikimedia.org/wiki/File:Matcha_Scoop.jpg
+
+10. assets/images/kyoto-station.jpg
+    内容：京都駅
+    作者：MaedaAkihiko
+    ライセンス：CC0 1.0
+    出典：https://commons.wikimedia.org/wiki/File:Kyoto-STA_Central.jpg
+
+11. assets/images/subway.jpg
+    内容：京都市営地下鉄20系
+    作者：ATTESA-R
+    ライセンス：CC BY-SA 4.0
+    出典：https://commons.wikimedia.org/wiki/File:京都市営地下鉄20系KS31編成_急行_国際会館行.jpg
+
+12. assets/images/disaster.svg
+    内容：防災準備を説明する簡易図
+    制作：第41組（本サイト用オリジナル）

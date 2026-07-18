@@ -72,3 +72,15 @@ KYOTO DAYS　写真・画像出典
 12. assets/images/disaster.svg
     内容：防災準備を説明する簡易図
     制作：第41組（本サイト用オリジナル）
+
+13. assets/images/wagashi.webp
+    内容：季節の練り切り（表示用にWebP変換・トリミング）
+    作者：Nesnad
+    ライセンス：CC BY 4.0
+    出典：https://commons.wikimedia.org/wiki/File:Wagashi_in_Tokyo_area_July_09_2021_05PM.jpeg
+
+14. assets/images/machiya-cafe.webp
+    内容：祇園の町家店舗（表示用にWebP変換・トリミング）
+    作者：Francesco_G
+    ライセンス：CC BY-SA 2.0
+    出典：https://commons.wikimedia.org/wiki/File:Gion_restaurant_by_Francesco_G_in_Kyoto.jpg

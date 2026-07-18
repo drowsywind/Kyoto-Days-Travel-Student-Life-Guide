@@ -3,19 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="京都観光と留学生生活の総合ガイド">
+  <meta name="description" content="京都の観光、交通、食文化、留学生生活を一つにまとめた実用ガイド">
+  <meta name="theme-color" content="#55675f">
   <title>ホーム | KYOTO DAYS</title>
+  <link rel="preload" as="image" href="assets/images/hero-emakimono.webp" type="image/webp">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
+
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html"><span class="brand-mark">京</span><span class="brand-copy"><strong>KYOTO DAYS</strong><small>古都の旅と暮らし</small></span></a>
+    <a class="brand" href="index.html" aria-label="KYOTO DAYS ホーム">
+      <span class="brand-mark" aria-hidden="true">京</span>
+      <span class="brand-copy"><strong>KYOTO DAYS</strong><small>京都の観光と生活</small></span>
+    </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="globalNav">メニュー</button>
     <nav class="site-nav" id="globalNav" aria-label="メインナビゲーション">
       <ul>
-        <li><a href="index.html" class="active">ホーム</a></li>
+        <li><a href="index.html" class="active" aria-current="page">ホーム</a></li>
         <li><a href="about.html">京都</a></li>
         <li><a href="attractions.html">観光</a></li>
         <li><a href="food.html">グルメ</a></li>
@@ -29,85 +35,90 @@
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="container hero-layout">
-      <div class="hero-copy">
-        <div class="issue-label">KYOTO FIELD NOTES / 2026</div>
-        <p class="hero-kicker">旅と暮らしを、一冊の手帖のように。</p>
-          <h1 class="hero-title">
-              <span>京都を歩く。</span>
-              <span class="hero-title-accent">京都で暮らす。</span>
-          </h1>
-        <p>清水寺や伏見稲荷などの定番観光地から、市バス、ごみ分別、防災まで。京都を初めて訪れる人と、留学生のために必要な情報をまとめました。</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="attractions.html">観光スポットを見る</a>
-          <a class="btn btn-outline" href="student-life.html">生活ガイドを読む</a>
+  <section class="home-intro" aria-labelledby="home-title">
+    <div class="home-cinema-backdrop" data-depth="0" aria-hidden="true">
+      <img src="assets/images/hero-emakimono.webp" width="1672" height="941" alt="" fetchpriority="high" decoding="async">
+    </div>
+    <div class="home-cinema-vignette" data-depth="1" aria-hidden="true"></div>
+    <div class="container home-intro-grid">
+      <div class="home-intro-copy" data-depth="4">
+        <h1 id="home-title"><span>京都の観光と</span><span>暮らし</span></h1>
+        <p>観光地、食事、移動、防災。旅行にも留学生活にも必要な情報をまとめています。</p>
+      </div>
+      <figure class="home-photo" data-depth="3">
+        <div class="home-photo-frame">
+          <img src="assets/images/gion.webp" width="1280" height="853" fetchpriority="high" decoding="async" alt="祇園・花見小路の町並み">
         </div>
-        <dl class="hero-facts">
-          <div><dt>Pages</dt><dd>22</dd></div>
-          <div><dt>Area</dt><dd>Kyoto</dd></div>
-          <div><dt>For</dt><dd>Travel &amp; Life</dd></div>
-        </dl>
-      </div>
-      <div class="hero-collage" aria-label="京都の実景写真">
-        <figure class="hero-photo hero-photo-main">
-          <img src="assets/images/gion.jpg" alt="祇園・花見小路の実景写真">
-          <figcaption>GION / HIGASHIYAMA</figcaption>
-        </figure>
-        <figure class="hero-photo hero-photo-small">
-          <img src="assets/images/fushimi.jpg" alt="伏見稲荷大社の千本鳥居の実景写真">
-          <figcaption>FUSHIMI INARI</figcaption>
-        </figure>
-        <figure class="hero-photo hero-photo-small">
-          <img src="assets/images/kyoto-station.jpg" alt="京都駅の実景写真">
-          <figcaption>KYOTO STATION</figcaption>
-        </figure>
-        <p class="vertical-caption">古い町並みと、今の暮らし。</p>
-      </div>
+        <figcaption>祇園・花見小路</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section home-index" aria-labelledby="purpose-title">
     <div class="container">
-      <span class="eyebrow">CONTENTS</span>
-      <h2 class="section-title">目的から読む</h2>
-      <p class="section-lead">必要なページへすぐ移動できるように、内容を四つに分けています。</p>
+      <div class="section-heading">
+        <h2 id="purpose-title">目的から探す</h2>
+        <p>知りたい内容に近い項目から進んでください。</p>
+      </div>
       <div class="guide-index">
-        <a class="guide-row" href="attractions.html"><span>01</span><div><h3>観光する</h3><p>寺社、自然、町歩きの定番スポットを紹介。</p></div><span class="arrow">↗</span></a>
-        <a class="guide-row" href="food.html"><span>02</span><div><h3>京都で食べる</h3><p>京料理、ラーメン、抹茶スイーツを案内。</p></div><span class="arrow">↗</span></a>
-        <a class="guide-row" href="transport.html"><span>03</span><div><h3>市内を移動する</h3><p>バスと地下鉄の使い分け、混雑時の考え方。</p></div><span class="arrow">↗</span></a>
-        <a class="guide-row" href="student-life.html"><span>04</span><div><h3>京都で暮らす</h3><p>留学生向けの生活、ごみ分別、防災情報。</p></div><span class="arrow">↗</span></a>
+        <a class="guide-row" href="attractions.html">
+          <span>観光</span>
+          <div><h3>寺社や町を歩く</h3><p>定番の寺社、自然、町歩きの場所。</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="guide-row" href="food.html">
+          <span>食事</span>
+          <div><h3>京都で食べる</h3><p>京料理、ラーメン、抹茶の甘味。</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="guide-row" href="transport.html">
+          <span>交通</span>
+          <div><h3>市内を移動する</h3><p>地下鉄、鉄道、市バスの使い分け。</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="guide-row" href="student-life.html">
+          <span>生活</span>
+          <div><h3>京都で暮らす</h3><p>留学生活、ごみ分別、防災の基本。</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--surface-2)">
+  <section class="section home-places" aria-labelledby="places-title">
     <div class="container">
-      <span class="eyebrow">THREE PLACES</span>
-      <h2 class="section-title">最初に歩きたい三つの場所</h2>
-      <p class="section-lead">京都らしい景色の違いが分かりやすい、東山・伏見・嵐山を選びました。</p>
-      <div class="grid grid-3">
-        <article class="card">
-          <img src="assets/images/kiyomizu.jpg" alt="清水寺の実景写真" loading="lazy">
-          <div class="card-body"><span class="eyebrow">HIGASHIYAMA</span><h3>清水寺</h3><p>舞台からの眺めと、坂道の参道を楽しむ。</p><a class="card-link" href="kiyomizu.html">訪問ガイド</a></div>
+      <div class="section-heading">
+        <h2 id="places-title">最初に見ておきたい三か所</h2>
+        <p>場所ごとに混雑する時間や歩き方が違います。</p>
+      </div>
+      <div class="featured-places">
+        <article class="place-lead">
+          <a href="kiyomizu.html"><img src="assets/images/kiyomizu.webp" width="1280" height="854" loading="lazy" decoding="async" alt="清水寺の本堂と舞台"></a>
+          <div>
+            <h3><a href="kiyomizu.html">清水寺</a></h3>
+            <p>舞台からの眺めと坂道の参道。朝の早い時間が歩きやすい場所です。</p>
+            <a class="card-link" href="kiyomizu.html">訪問ガイドを読む</a>
+          </div>
         </article>
-        <article class="card">
-          <img src="assets/images/fushimi.jpg" alt="伏見稲荷大社の千本鳥居の実景写真" loading="lazy">
-          <div class="card-body"><span class="eyebrow">FUSHIMI</span><h3>伏見稲荷大社</h3><p>鳥居が連なる参拝路を、自分のペースで歩く。</p><a class="card-link" href="fushimi.html">訪問ガイド</a></div>
-        </article>
-        <article class="card">
-          <img src="assets/images/arashiyama.jpg" alt="嵐山・渡月橋の実景写真" loading="lazy">
-          <div class="card-body"><span class="eyebrow">ARASHIYAMA</span><h3>嵐山</h3><p>渡月橋、竹林、山の景色を一度に楽しむ。</p><a class="card-link" href="arashiyama.html">訪問ガイド</a></div>
-        </article>
+        <div class="place-side">
+          <article class="place-story">
+            <a href="fushimi.html"><img src="assets/images/fushimi.webp" width="1280" height="853" loading="lazy" decoding="async" alt="伏見稲荷大社の千本鳥居"></a>
+            <div><h3><a href="fushimi.html">伏見稲荷大社</a></h3><p>千本鳥居から稲荷山へ続く参拝路。</p><a class="card-link" href="fushimi.html">訪問ガイドを読む</a></div>
+          </article>
+          <article class="place-story">
+            <a href="arashiyama.html"><img src="assets/images/arashiyama.webp" width="1280" height="960" loading="lazy" decoding="async" alt="嵐山の渡月橋と山並み"></a>
+            <div><h3><a href="arashiyama.html">嵐山</a></h3><p>渡月橋、竹林、寺院を半日かけて歩く地域。</p><a class="card-link" href="arashiyama.html">訪問ガイドを読む</a></div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section-sm">
     <div class="container">
-      <div class="cta">
-        <div><span class="eyebrow">5 QUESTIONS</span><h2>最後に、京都クイズ。</h2><p>サイトを読んだ後に、五問だけ挑戦できます。</p></div>
-        <a class="btn btn-primary" href="quiz.html">クイズを始める</a>
+      <div class="home-quiz">
+        <div><h2>京都クイズ</h2><p>観光と生活の基本を五問で確認できます。</p></div>
+        <a class="text-link" href="quiz.html">クイズを始める →</a>
       </div>
     </div>
   </section>
@@ -116,14 +127,19 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div><h3>KYOTO DAYS</h3><p>京都を訪れる人と、京都で暮らす留学生のための実用ガイド。</p><p class="footer-source">使用写真の出典は同梱の「写真・画像出典.txt」に記載しています。</p></div>
-      <div><h4>観光</h4><ul><li><a href="attractions.html">観光スポット</a></li><li><a href="food.html">京都グルメ</a></li><li><a href="gallery.html">写真</a></li></ul></div>
-      <div><h4>生活</h4><ul><li><a href="transport.html">交通</a></li><li><a href="student-life.html">留学生生活</a></li><li><a href="disaster.html">防災</a></li></ul></div>
+      <div>
+        <h2>KYOTO DAYS</h2>
+        <p>京都を訪れる人と、京都で暮らす留学生のための実用ガイド。</p>
+        <p class="footer-source"><a href="写真・画像出典.txt">写真・画像の出典</a></p>
+      </div>
+      <div><h3>観光</h3><ul><li><a href="attractions.html">観光スポット</a></li><li><a href="food.html">京都グルメ</a></li><li><a href="gallery.html">写真</a></li></ul></div>
+      <div><h3>暮らしと案内</h3><ul><li><a href="transport.html">交通</a></li><li><a href="student-life.html">留学生生活</a></li><li><a href="disaster.html">防災</a></li><li><a href="accommodation.html">宿泊ガイド</a></li><li><a href="site-info.html">サイト情報</a></li></ul></div>
     </div>
-    <div class="copyright">&copy; 2026 KYOTO DAYS. Web Programming I Final Project — Heian Editorial Edition.</div>
+    <div class="copyright">&copy; 2026 KYOTO DAYS. Web Programming I Final Project.</div>
   </div>
 </footer>
+
 <button class="to-top" aria-label="ページ上部へ">↑</button>
-<script src="assets/js/main.js"></script>
+<script src="assets/vendor/gsap.min.js"></script><script src="assets/vendor/ScrollTrigger.min.js"></script><script src="assets/js/motion.js"></script><script src="assets/js/main.js"></script>
 </body>
 </html>

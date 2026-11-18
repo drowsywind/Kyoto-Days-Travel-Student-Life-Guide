@@ -166,36 +166,27 @@
     if (!hero) return;
 
     const art = hero.querySelector('.home-cinema-backdrop img');
-    const frame = hero.querySelector('.home-photo-frame');
-    const photo = hero.querySelector('.home-photo img');
+    const kicker = hero.querySelector('.home-kicker');
     const lines = [...hero.querySelectorAll('h1 span')];
-    const summary = hero.querySelector('.home-intro-copy > p:last-child');
-    const caption = hero.querySelector('.home-photo figcaption');
+    const lead = hero.querySelector('.home-lead');
+    const actions = hero.querySelector('.home-actions');
+    const vertical = hero.querySelector('.home-vertical');
+    const caption = hero.querySelector('.home-caption');
     const compact = performanceMode !== 'full';
 
     const intro = gsap.timeline({ defaults: { ease: 'power4.out' } });
-    intro
-      .fromTo(art, { scale: compact ? 1.025 : 1.065 }, { scale: 1, duration: compact ? 1.45 : 2.35 }, 0)
-      .fromTo(frame,
-        { clipPath: compact ? 'inset(4% 7% 4% 7%)' : 'inset(3% 10% 3% 10%)' },
-        { clipPath: 'inset(0% 0% 0% 0%)', duration: compact ? 1.15 : 1.75, ease: 'power3.inOut' },
-        compact ? .05 : .14)
-      .fromTo(photo,
-        { scale: compact ? 1.05 : 1.13, xPercent: compact ? 0 : 2.4 },
-        { scale: 1, xPercent: 0, duration: compact ? 1.3 : 2.05 },
-        .08)
-      .fromTo(lines,
-        { clipPath: 'inset(0 8% 10% 0)', yPercent: 16, autoAlpha: .72 },
-        { clipPath: 'inset(0 0 0% 0)', yPercent: 0, autoAlpha: 1, duration: compact ? .78 : 1.05, stagger: compact ? .11 : .18 },
-        compact ? .22 : .32)
-      .fromTo(summary,
-        { autoAlpha: .7, y: compact ? 6 : 12 },
-        { autoAlpha: 1, y: 0, duration: compact ? .7 : 1 },
-        compact ? .52 : .82)
-      .fromTo(caption,
-        { autoAlpha: .58, x: -8 },
-        { autoAlpha: 1, x: 0, duration: .72 },
-        compact ? .72 : 1.18);
+    if (art) intro.fromTo(art, { scale: compact ? 1.04 : 1.09 }, { scale: 1, duration: compact ? 1.6 : 2.6 }, 0);
+    if (kicker) intro.fromTo(kicker, { autoAlpha: .3, x: -12 }, { autoAlpha: 1, x: 0, duration: .8 }, compact ? .1 : .2);
+    if (lines.length) {
+      intro.fromTo(lines,
+        { clipPath: 'inset(0 0 100% 0)', yPercent: 28 },
+        { clipPath: 'inset(0 0 0% 0)', yPercent: 0, duration: compact ? .85 : 1.15, stagger: compact ? .1 : .16 },
+        compact ? .2 : .34);
+    }
+    if (lead) intro.fromTo(lead, { autoAlpha: .3, y: compact ? 8 : 14 }, { autoAlpha: 1, y: 0, duration: .9 }, compact ? .5 : .78);
+    if (actions) intro.fromTo(actions, { autoAlpha: .3, y: 10 }, { autoAlpha: 1, y: 0, duration: .8 }, compact ? .62 : .95);
+    if (vertical) intro.fromTo(vertical, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 1.4, ease: 'power3.inOut' }, .6);
+    if (caption) intro.fromTo(caption, { autoAlpha: .3 }, { autoAlpha: 1, duration: .8 }, 1.1);
 
     if (performanceMode !== 'full') return;
 
@@ -207,17 +198,17 @@
         scrub: 1.15
       }
     })
-      .to(art, { yPercent: 4.5, scale: 1.035, ease: 'none' }, 0)
-      .to('.home-photo', { yPercent: -5.5, ease: 'none' }, 0)
-      .to('.home-intro-copy', { yPercent: -7, autoAlpha: .58, ease: 'none' }, 0)
-      .to('.home-cinema-vignette', { opacity: .82, ease: 'none' }, 0);
+      .to(art, { yPercent: 8, scale: 1.04, ease: 'none' }, 0)
+      .to('.home-intro-copy', { yPercent: -10, ease: 'none' }, 0)
+      .to('.home-cinema-vignette', { opacity: .9, ease: 'none' }, 0);
 
+    // Slide the content, not the section itself, so no gap opens under the hero.
     const indexSection = document.querySelector('.home-index');
-    if (indexSection) {
-      gsap.fromTo(indexSection,
-        { clipPath: 'inset(9% 0 0 0)', y: 34 },
+    const indexContent = indexSection?.querySelector('.container');
+    if (indexSection && indexContent) {
+      gsap.fromTo(indexContent,
+        { y: 34 },
         {
-          clipPath: 'inset(0% 0 0 0)',
           y: 0,
           ease: 'none',
           scrollTrigger: {
@@ -237,8 +228,20 @@
     const container = hero.querySelector('.container');
     const crumbs = hero.querySelector('.breadcrumbs');
     const title = hero.querySelector('h1');
-    const copy = hero.querySelector('p');
+    const copy = hero.querySelector('.container > p');
+    const media = hero.querySelector('.page-hero-media img');
     const compact = performanceMode !== 'full';
+
+    if (media) {
+      gsap.fromTo(media, { scale: compact ? 1.04 : 1.08 }, { scale: 1, duration: compact ? 1.4 : 2.2, ease: 'power3.out' });
+      if (!compact) {
+        gsap.to(media, {
+          yPercent: 6,
+          ease: 'none',
+          scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 1 }
+        });
+      }
+    }
 
     gsap.timeline({ defaults: { ease: 'power4.out' } })
       .fromTo(crumbs, { autoAlpha: .58, x: -10 }, { autoAlpha: 1, x: 0, duration: .62 }, 0)

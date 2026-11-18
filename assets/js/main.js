@@ -64,6 +64,14 @@
         top: 0,
         behavior: Motion.prefersReducedMotion() || !Motion.isEnabled() ? 'auto' : 'smooth'
       });
+
+      // The button hides itself at the top of the page, so hand focus to the page heading
+      // instead of leaving keyboard users on an invisible control.
+      const heading = document.querySelector('main h1');
+      if (heading) {
+        if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
     });
 
     if (!('IntersectionObserver' in window)) {
